@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar target/ees-site.jar --server.port=${PORT}

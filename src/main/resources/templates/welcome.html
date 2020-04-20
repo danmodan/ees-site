@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/head">
+    <title id="pageTitle">Espectro Energia Solar</title>
+</head>
+
+<body class="container-fluid" id="page-body">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-gradient-light">
+        <a href="/"><img th:src="@{/img/ees-logo.png}" alt="logo" class="d-inline-block brand-logo"></a>
+        <a class="d-inline-block text-center align-middle text-uppercase brand-name ml-md-3"
+            href="/">Espectro <br class="hidebreak">Energia Solar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="nav-ees collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-secundary font-weight-bolder" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secundary font-weight-bolder" href="#servicos-link">Servi&ccedil;os</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secundary font-weight-bolder" href="#contato-link">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-img carousel-img-2">
+                <div class="w-100"></div>
+                <div class="contato-teaser">
+                    <a href="#contato-link" class="text-secundary" ><i class="far fa-arrow-alt-circle-down"></i></a>
+                    <p>Saiba como abastecer mais de um im&oacute;vel com um &uacute;nico sistema</p>
+                </div>
+            </div>
+            <div class="carousel-item carousel-img carousel-img-1">
+                <div class="w-100"></div>
+            </div>
+            <div class="carousel-item carousel-img carousel-img-3">
+                <div class="w-100"></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <p class="lead">
+                A Espectro &eacute; especialista em energia solar fotovoltaica. Desenvolvemos solu&ccedil;&otilde;es
+                completas para auto gera&ccedil;&atilde;o de energia. Saiba como aliar economia, tecnologia e
+                sustentabilidade usando o sol a seu favor.</p>
+            <p class="lead">Trabalhamos com os grandes fornecedores do mercado e
+                garantimos qualidade t&eacute;cnica de todos os nossos profissionais.
+            </p>
+            <div class="text-center text-uppercase">
+                <a class="btn btn-outline-secundary" href="#contato-link" role="button">Pe&ccedil;a seu or&ccedil;amento</a>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-5 pt-5">
+        <div class="row align-items-start">
+            <div class="col-lg-6">
+                <h2>Motiva&ccedil;&atilde;o</h2>
+                <p>Acreditamos numa forma de consumo inteligente de energia, sem agredir o meio ambiente, gerando
+                    autonomia ao consumidor, vinda de uma fonte infinita e 100% renov&aacute;vel.</p>
+                <p>Somos motivados diariamente pela energia de sol e buscamos o equil&iacute;brio entre tecnologia,
+                    economia e sustentabilidade em um dos pa&iacute;ses com um dos maiores potenciais energ&eacute;ticos
+                    do mundo. E &eacute; pensando nisso que nos motivamos a oferecer energia solar com atendimento de
+                    qualidade e pre&ccedil;o justo para o seu im&oacute;vel.</p>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-around">
+                <img th:src="@{/img/tchau-sol.jpg}" alt="tchau-sol" class="d-inline-block img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="pb-5 pt-5 dark-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Benef&iacute;cios</h2>
+            </div>
+            <div class="row pt-2">
+                <div class="col-sm-6">
+                    <ul class="benefits-list text-right">
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-10">Autonomia na produ&ccedil;&atilde;o de energia</div>
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-bolt"></i></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-10">At&eacute; 95% de economia na conta mensal</div>
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-dollar-sign"></i></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-10">Valoriza&ccedil;&atilde;o imediata do seu im&oacute;vel</div>
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-home"></i></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-10">Pain&eacute;is solares com vida &uacute;til de 25 &agrave; 30 anos
+                                </div>
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-solar-panel"></i></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="benefits-list text-left">
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-leaf"></i></div>
+                                <div class="col-10">Baixo impacto ambiental</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-sun"></i></div>
+                                <div class="col-10">Fonte de energia limpa e inesgot&aacute;vel</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-chart-line"></i></div>
+                                <div class="col-10">Sua conta protegida de infla&ccedil;&atilde;o energ&eacute;tica
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row align-items-center no-gutters pt-2 pb-2">
+                                <div class="col-2 benefits-list-icon text-primary text-center"><i
+                                        class="fas fa-exchange-alt"></i></div>
+                                <div class="col-10">Retorno do investimento em at&eacute; 5 anos</div>
+                            </div>
+                            <span id="servicos-link"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <div class="text-center pb-5 pt-5">
+                <h2>Servi&ccedil;os</h2>
+            </div>
+            <div class="row justify-content-around no-gutters">
+                <div class="mb-5 col-12 col-sm-9 col-lg-5">
+                    <div class="shadow-lg card odd-card">
+                        <img th:src="@{/img/consultoria.jpg}" class="card-img-top" alt="consultoria">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Projetos</h5>
+                            <p class="card-text">Dimensionamos seu sistema fotovoltaico atrav&eacute;s de
+                                c&aacute;lculos de engenharia que levam em considera&ccedil;&atilde;o consumo atual e
+                                localiza&ccedil;&atilde;o para abastecer todo o im&oacute;vel, atendendo as
+                                exig&ecirc;ncias t&eacute;cnicas e utilizando os melhores equipamentos
+                                dispon&iacute;veis no mercado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 col-12 col-sm-9 col-lg-5">
+                    <div class="shadow-lg card even-card">
+                        <img th:src="@{/img/instalacao.jpg}" class="card-img-top" alt="instalacao">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Instala&ccedil;&atilde;o</h5>
+                            <p class="card-text">Implementa&ccedil;&atilde;o r&aacute;pida e
+                                segura do seu sistema solar em at&eacute; 72h. Com profissionais especializados
+                                conectamos os pain&eacute;is, inversores e estrutura, atendendo aos requisitos exigidos
+                                com agilidade e qualidade necess&aacute;rias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 col-12 col-sm-9 col-lg-5">
+                    <div class="shadow-lg card odd-card">
+                        <img th:src="@{/img/manutencao.jpg}" class="card-img-top" alt="manutencao">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Manuten&ccedil;&atilde;o</h5>
+                            <p class="card-text">Proteja a efici&ecirc;ncia do seu sistema
+                                solar atrav&eacute;s da manuten&ccedil;&atilde;o semestral preventiva dos equipamentos e
+                                evite falhas operacionais. Est&aacute; produzindo menos do que consome? Solicite uma
+                                revis&atilde;o do seu sistema e entenda o que pode estar impedindo o funcionamento
+                                integral do seu sistema fotovoltaico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 col-12 col-sm-9 col-lg-5">
+                    <div class="shadow-lg card even-card">
+                        <img th:src="@{/img/limpeza.jpg}" class="card-img-top" alt="limpeza">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Limpeza</h5>
+                            <p class="card-text">Higienize seus pain&eacute;is e estruturas semestralmente e
+                                evite a perda de efici&ecirc;ncia do seu sistema, garantindo sua economia mensal e
+                                mantendo 100% de desempenho do seu projeto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 col-12 col-sm-9 col-lg-5">
+                    <div class="shadow-lg card odd-card">
+                        <img th:src="@{/img/integracao.jpg}" class="card-img-top" alt="integracao">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Integra&ccedil;&atilde;o</h5>
+                            <p class="card-text">Cuidamos de todo o tr&acirc;mite exigido pelas
+                                concession&aacute;rias de energia, integrando seu sistema a rede fornecedora da sua
+                                cidade, evitando burocracias e garantindo o sucesso do seu projeto.</p>
+                        </div>
+                    </div>
+                    <span id="contato-link"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-center pb-5 pt-5">
+            <h2>Contato</h2>
+        </div>
+        <div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}" id="form-alert-message"></div>
+        <span id="message-link"></span>
+        <form action="#" th:action="@{/contact}" th:object="${contactForm}" enctype="multipart/form-data" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group" data-toggle="tooltip" data-placement="top" title="Obrigat&oacute;rio">
+                        <label for="nome">Nome *</label>
+                        <input type="text" class="form-control" id="nome" th:field="*{nome}" required maxlength="100">
+                    </div>
+                    <div class="form-group" data-toggle="tooltip" data-placement="top"
+                        title="Obrigat&oacute;rio email v&aacute;lido">
+                        <label for="email">Email *</label>
+                        <input type="email" class="form-control" id="email" th:field="*{email}" placeholder="qwert@email.com"
+                            aria-describedby="emailHelp" required maxlength="400">
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu
+                            email.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control phone" id="telefone" th:field="*{telefone}" placeholder="(11) 91234-1234">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="whatsapp" th:field="*{whatsapp}">
+                                    <label class="form-check-label" for="whatsapp">
+                                        <span class="tel-whats"><i class="fab fa-whatsapp"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group first-questions" data-toggle="tooltip" data-placement="top"
+                        title="Obrigat&oacute;rio">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea class="form-control height-all" id="mensagem" th:field="*{mensagem}" required
+                            aria-describedby="mensagemHelp" placeholder="Em que podemos ajudar?"
+                            maxlength="1000"></textarea>
+                        <small id="mensagemHelp" class="form-text text-muted">At&eacute; 1000
+                            caracteres.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group col-5 col-lg-4">
+                            <label for="cep">CEP</label>
+                            <input type="text" class="form-control cep" id="cep" th:field="*{cep}" placeholder="70150-900" maxlength="12">
+                        </div>
+                        <div class="form-group col-12 col-lg-8">
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" class="form-control" id="logradouro" th:field="*{logradouro}"
+                                placeholder="Pra&ccedil;a dos Tr&ecirc;s Poderes" disabled maxlength="200">
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="numero">N&uacute;mero</label>
+                            <input type="text" class="form-control" id="numero" th:field="*{numero}" placeholder="1234" disabled
+                                maxlength="100">
+                        </div>
+                        <div class="form-group col-8">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" class="form-control" id="bairro" th:field="*{bairro}"
+                                placeholder="Zona C&iacute;vico-Administrativa" disabled maxlength="200">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" th:field="*{cidade}" placeholder="Bras&iacute;lia"
+                                disabled maxlength="200">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="uf">UF</label>
+                            <select id="uf" th:field="*{uf}" class="form-control" disabled>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amap&aacute;</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Cear&aacute;</option>
+                                <option value="DF" selected>Distrito Federal</option>
+                                <option value="ES">Esp&iacute;rito Santo</option>
+                                <option value="GO">Goi&aacute;s</option>
+                                <option value="MA">Maranh&atilde;o</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Par&aacute;</option>
+                                <option value="PB">Para&iacute;ba</option>
+                                <option value="PR">Paran&aacute;</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piau&iacute;</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rond&ocirc;nia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">S&atilde;o Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" class="form-control" id="complemento" th:field="*{complemento}" disabled maxlength="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                    <div class="form-group mb-md-auto">
+                        <label for="contaLuz">Conta de luz</label>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="contaLuz" th:field="*{contaLuz}" aria-describedby="contaLuzHelp">
+                                <label class="custom-file-label" for="contaLuz">Escolher arquivo</label>
+                            </div>
+                        </div>
+                        <small id="contaLuzHelp" class="form-text text-muted">At&eacute; 10 MB.</small>
+                    </div>
+                    <p>Pe&ccedil;a seu or&ccedil;amento sem compromisso e receba sua proposta em at&eacute; 24h.
+                    </p>
+                    <div class="alert alert-warning" role="alert">
+                        Para que possamos
+                        desenvolver um c&aacute;lculo aproximado do seu sistema, por favor nos envie uma conta
+                        de energia recente do
+                        im&oacute;vel e receba sua simula&ccedil;&atilde;o com valores atualizados.
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5 mt-3">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <div class="pb-5 pt-5 dark-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Connect</h2>
+            </div>
+            <div class="connect">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/espectrosolarenergia"><i
+                                class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://instagram.com/espectrosolarenergia?igshid=1bfkmjiupncqy"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/company/espectro-energia-solar"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://wa.me/5511983241439"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="pb-5 pt-5 container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="footer-title-section pb-3 pt-3 mb-2">
+                        <a href="/"><img th:src="@{/img/ees-logo.png}" alt="logo" class="d-inline-block brand-logo"></a>
+                    </div>
+                    <ul>
+                        <li class="pb-2 pt-2">(11) 98324-1439</li>
+                        <li class="pb-2 pt-2">(11) 98732-4613</li>
+                        <li class="pb-2 pt-2">Av. Pres. Washington Luis, 859</li>
+                        <li class="pb-2 pt-2">Jd. Silveira</li>
+                        <li class="pb-2 pt-2">Barueri - SP</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-title-section pb-3 pt-3 mb-2 row no-gutters">
+                        <div class="col align-self-center">
+                            Hor&aacute;rios
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="pb-2 pt-2">Seg - Sex: 9:00 - 19:00</li>
+                        <li class="pb-2 pt-2">S&aacute;bado: 9:00AM - 13:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-title-section pb-3 pt-3 mb-2 row no-gutters">
+                        <div class="col align-self-center">
+                            Regi&otilde;es
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="pb-2 pt-2">Barueri, Santana de Parnaíba,</li>
+                        <li class="pb-2 pt-2">Granja Viana, Jandira,</li>
+                        <li class="pb-2 pt-2">Cotia, Itapevi,</li>
+                        <li class="pb-2 pt-2">Carapicuíba e Osasco</li>
+                    </ul>
+                </div>
+                <div class="col-12 footer-copy-right pt-3">
+                    <p>&copy; espectro-energia-solar.com.br 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="https://kit.fontawesome.com/91a1556efe.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        // phone mask
+        $(function () {
+            var maskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+                options = {
+                    onKeyPress: function (val, e, field, options) {
+                        field.mask(maskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $('.phone').mask(maskBehavior, options);
+        })
+        // cep mask
+        $(function () {
+            var maskBehavior = function (val) {
+                return '00000-000';
+            },
+                options = {
+                    onKeyPress: function (val, e, field, options) {
+                        field.mask(maskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $('.cep').mask(maskBehavior, options);
+        })
+        // cep call
+        $(function () {
+            $("#cep").focusout(function () {
+                $.ajax({
+                    url: 'https://viacep.com.br/ws/' + $(this).val().replace(/\D/g, '') + '/json/unicode/',
+                    dataType: 'json',
+                    success: function (resposta) {
+                        var formLogradouro = $("#logradouro");
+                        formLogradouro.val(resposta.logradouro);
+
+                        var formComplemento = $("#complemento");
+                        formComplemento.val(resposta.complemento);
+
+                        var formBairro = $("#bairro");
+                        formBairro.val(resposta.bairro);
+
+                        var formCidade = $("#cidade");
+                        formCidade.val(resposta.localidade);
+
+                        var formUf = $("#uf");
+                        formUf.val(resposta.uf);
+
+                        formLogradouro.removeAttr("disabled");
+                        formComplemento.removeAttr("disabled");
+                        formBairro.removeAttr("disabled");
+                        formCidade.removeAttr("disabled");
+                        formUf.removeAttr("disabled");
+
+                        formNumero = $("#numero");
+                        formNumero.removeAttr("disabled");
+                        $("#numero").focus();
+                    }
+                });
+            });
+        })
+        $(function () {
+            bsCustomFileInput.init()
+        })
+        $(function () {
+            $("#form-alert-message").delay(10000).fadeOut();
+        })
+    </script>
+</body>
+
+</html>

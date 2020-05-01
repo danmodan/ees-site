@@ -1,8 +1,0 @@
-spring.thymeleaf.cache: false
-spring:
-  servlet:
-    multipart:
-      max-file-size:
-        10MB
-  application:
-    name: ees-site

@@ -1,0 +1,9 @@
+#!include:.gitignore
+/.gcloudignore
+/.gitignore
+/.git/
+/theme/
+/service.sh
+/docker-compose.yml
+/.env
+/public

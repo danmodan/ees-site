@@ -148,6 +148,18 @@ footer ul {
     background: url(../img/3.jpg) center no-repeat;
 }
 
+.payment-methods {
+    margin-bottom: 1rem;
+}
+
+.payment-methods div {
+    text-align: center;
+}
+
+.payment-methods div img {
+    max-height: 3rem;
+}
+
 @include media-breakpoint-up(sm) {
     br.hidebreak {
         display: none;

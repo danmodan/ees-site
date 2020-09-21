@@ -77,8 +77,8 @@ public class ContactFormFunction implements HttpFunction {
 		try {
 
 			return Triple.of(
-				part.getFileName().get(),
-				part.getContentType().get(),
+				part.getFileName().orElseThrow(),
+				part.getContentType().orElseThrow(),
 				Base64.getEncoder().encodeToString(part.getInputStream().readAllBytes()));
 		} catch (Exception e) {
 			return null;

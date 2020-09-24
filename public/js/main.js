@@ -67,6 +67,7 @@ $(function () {
 })
 $(function () {
     $("#form-alert-message").hide();
+    $("#spinner-btn-send").hide();
 })
 // send form
 $(function () {
@@ -105,12 +106,16 @@ $(function () {
             data: formData,
             contentType: false,
             processData: false,
+            beforeSend: function() {
+                $("#spinner-btn-send").show();
+            },
             success: function(result){
                 alertMessage.text("Obrigada! Entraremos em contato.")
                 alertMessage.removeClass("alert-danger");
                 alertMessage.addClass("alert-success");
                 alertMessage.show();
                 alertMessage.delay(10000).fadeOut();
+                $("#spinner-btn-send").hide();
             },
             error: function(err){
                 alertMessage.text("Falhou! Por favor, entre em contato por nossos telefones.")
@@ -118,6 +123,7 @@ $(function () {
                 alertMessage.addClass("alert-danger");
                 alertMessage.show();
                 alertMessage.delay(10000).fadeOut();
+                $("#spinner-btn-send").hide();
             }
         });
     });

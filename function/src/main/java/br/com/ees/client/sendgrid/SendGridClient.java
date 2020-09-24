@@ -1,12 +1,13 @@
 package br.com.ees.client.sendgrid;
 
+import static java.lang.System.out;
+
 import java.net.URI;
 import java.net.http.HttpRequest;
 import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpRequest.Builder;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
-import java.util.concurrent.CompletableFuture;
 
 import br.com.ees.client.HttpClient;
 import br.com.ees.client.sendgrid.model.From;
@@ -44,7 +45,7 @@ public class SendGridClient {
         HttpClient.CLIENT
             .sendAsync(httpReq, BodyHandlers.ofString())
             .thenApply(HttpResponse::body)
-            .thenAccept(httpResp -> System.out.println(String.format("req = %s resp = %s", requestBody, httpResp)))
+            .thenAccept(out::println)
             .join();
 
     }

@@ -35,14 +35,17 @@ public class SendGridClient {
                  "Content-Type", "application/json",
                  "Authorization", API_KEY);
 
-    public static CompletableFuture<HttpResponse<String>> sendEmail(SendInboundMarketingRequest request) {
+    public static void sendEmail(SendInboundMarketingRequest request) {
 
         final var requestBody = ObjectMapperUtils.name(request);
 
-        return HttpClient.CLIENT
-            .sendAsync(
-                SEND_EMAIL_REQUEST.POST(BodyPublishers.ofString(requestBody)).build(),
-                BodyHandlers.ofString());
+        final var httpReq = SEND_EMAIL_REQUEST.POST(BodyPublishers.ofString(requestBody)).build();
+
+        HttpClient.CLIENT
+            .sendAsync(httpReq, BodyHandlers.ofString())
+            .thenApply(HttpResponse::body)
+            .thenAccept(httpResp -> System.out.println(String.format("req = %s resp = %s", requestBody, httpResp)))
+            .join();
 
     }
 

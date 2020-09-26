@@ -21,6 +21,9 @@ run_node() {
 }
 
 case $1 in
+    npm-install)
+        run_node npm --prefix theme/ install
+        ;;
     compile-sass)
         run_node npx sass --watch theme/scss/main.scss:public/css/main.css --style compressed
         ;;

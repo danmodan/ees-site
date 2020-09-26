@@ -76,10 +76,18 @@ public class ContactFormFunction implements HttpFunction {
 
 		try {
 
+			final var length = part.getContentLength();
+
+			if(length > 700_000) {  // length > 10 MB
+				throw new IllegalArgumentException("10 MB é o máximo.");
+			}
+
 			return Triple.of(
 				part.getFileName().orElseThrow(),
 				part.getContentType().orElseThrow(),
 				Base64.getEncoder().encodeToString(part.getInputStream().readAllBytes()));
+		} catch (IllegalArgumentException e) {
+			throw e;
 		} catch (Exception e) {
 			return null;
 		}

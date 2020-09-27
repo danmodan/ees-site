@@ -78,7 +78,7 @@ public class ContactFormFunction implements HttpFunction {
 
 			final var length = part.getContentLength();
 
-			if(length > 700_000) {  // length > 10 MB
+			if(length > 11_000_000) {  // length > 10 MB
 				throw new IllegalArgumentException("10 MB é o máximo.");
 			}
 
